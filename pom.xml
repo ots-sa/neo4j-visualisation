@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>neo4j-visualisation</name>
-	<description>Person Graph Visualisation</description>
+	<description>Neo4j Visualisation</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
