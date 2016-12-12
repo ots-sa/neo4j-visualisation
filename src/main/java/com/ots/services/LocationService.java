@@ -1,9 +1,7 @@
 package com.ots.services;
 
 import java.util.List;
-import java.util.Set;
 
-import com.ots.core.domain.Person;
 import com.ots.dto.BirthData;
 
 /**

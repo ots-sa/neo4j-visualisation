@@ -4,7 +4,6 @@ import com.ots.core.domain.Location;
 import com.ots.dto.BirthData;
 
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.GraphRepository;
@@ -17,8 +16,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LocationRepository extends GraphRepository<Location> {
 
-	@Query("MATCH (person:Person)-[b:IS_BORN]->(location:Location) where location.description = {description} " +
-				"RETURN location")
+	@Query("MATCH (person:Person)-[b:IS_BORN]->(location:Location) WHERE location.description = {description} " +
+			"RETURN location AS location, collect(person) AS personList, b.birthdate AS birthdate")
 	public List<BirthData> findPersonsBornInLocationByDescription(@Param("description") String description);
 
     

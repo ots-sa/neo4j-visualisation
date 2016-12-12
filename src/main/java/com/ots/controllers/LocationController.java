@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ots.dto.BirthData;
-import com.ots.dto.PersonData;
 import com.ots.services.LocationService;
-
+/**
+ * 
+ * @author domna
+ *
+ */
 @RestController
 @RequestMapping("location")
 public class LocationController {
